@@ -6,7 +6,9 @@
 	import fragmentShader from './trails_fs.glsl?raw';
 	import vertexShader from './_vs.glsl?raw';
 
-	const { size, renderer, scene, camera, renderStage } = useThrelte();
+	const { size, renderer, scene, camera, renderStage, autoRender } = useThrelte();
+
+	autoRender.set(false);
 
 	const sceneRt = new THREE.WebGLRenderTarget($size.width, $size.height, {
 		format: THREE.RGBAFormat,
